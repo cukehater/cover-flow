@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/gsap": "^3.0.0",
+    "gsap": "^3.12.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.8"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

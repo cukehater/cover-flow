@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: hidden;
+  background: #111;
+}
+
+.drag-proxy {
+  visibility: hidden;
+  position: absolute;
+}
+
+.controls {
+  position: absolute;
+  top: calc(50% + clamp(200px, 20vmin, 20vmin));
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  min-width: 200px;
+  height: 44px;
+  width: 20vmin;
+  z-index: 300;
+}
+
+.boxes {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  touch-action: none;
+}
+
+.box {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 20vmin;
+  width: 20vmin;
+  min-height: 120px;
+  min-width: 120px;
+  display: none;
+  transform: translateY(-50%);
+  -webkit-box-reflect: below 0.5vmin
+    linear-gradient(transparent 0 50%, #fff 100%);
+}
+
+.box img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
